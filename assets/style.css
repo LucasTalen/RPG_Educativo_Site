@@ -1,0 +1,51 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+}
+.menu {
+    height: 40px;
+    width: 100%;
+    background-color: aqua;
+}
+.video {
+    background-color: blue;
+    height: 300px;
+    width: 100%;
+}
+.card1{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    & .historia_card1 {
+        background-color: aqua;
+        width: 60%;
+        height: 100%;
+    }
+    .image_card1{
+        background-color: red;
+        width: 40%;
+        height: 100%;
+    }
+}
+
+.card2{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    & .image_card2 {
+        background-color: red;
+        width: 40%;
+        height: 100%;
+    }
+    .texto_card2{
+        background-color: aqua;
+        width: 60%;
+        height: 100%;
+    }
+}
+.footer{
+    height: 100px;
+    width: 100%;
+    background-color: blueviolet;
+}
