@@ -23,7 +23,7 @@
         height: 100%;
     }
     .image_card1{
-        background-color: red;
+        background-color: rgb(48, 91, 131);
         width: 40%;
         height: 100%;
         & img {
