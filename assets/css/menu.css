@@ -1,35 +1,86 @@
-.menu {
-    height: 40px;
-    width: 100%;
-    background-color: #553939;
-}
-.menu {
-    background-color: #333; 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #0c0c0c;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
 }
 
 .menu ul {
-    list-style-type: none; 
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex; 
 }
 
 .menu ul li {
-    margin-right: 10px; 
-}
-
-.menu ul li:last-child {
-    margin-right: 0; 
+    display: inline;
+    margin-right: 20px;
 }
 
 .menu ul li a {
-    display: block;
-    color: #fff; 
+    color: #d40b01;
     text-decoration: none;
     padding: 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .menu ul li a:hover {
-    background-color: #555; 
+    background-color: #333;
+}
+
+h2 {
+    color: #d40b01;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+p b {
+    color: #d40b01;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.elemento {
+    padding: 20px; /* Espaçamento interno para o elemento */
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #333333;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Centraliza o texto */
+    max-width: 80%; /* Largura máxima do elemento */
+}
+
+/* Estilos para texto dentro do elemento */
+.elemento p {
+    font-size: 18px;
+    color: #854d4d;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="checkbox"],
+.formulario input[type="submit"] {
+    width: calc(100% - 20px);
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario .button_enviar input[type="submit"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.formulario .button_enviar input[type="submit"]:hover {
+    background-color: #4CAF50;
 }
