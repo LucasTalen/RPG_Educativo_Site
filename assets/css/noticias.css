@@ -1,0 +1,134 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos do menu */
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu li:hover a {
+    color: #007bff;
+}
+
+/* Estilos do elemento de conteúdo */
+
+.elemento {
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.elemento p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.elemento h2 {
+    color: #007bff;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Estilos do formulário */
+
+/* Estilos do formulário */
+
+.formulario {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos dos campos de formulário */
+
+.nome, .e-mail {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin-bottom: 15px;
+    
+}
+
+.nome input, .e-mail input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+.nome label{
+    display: flex;
+}
+.e-mail label{
+    align-items: end;
+    justify-items: end;
+    display: flex;
+    
+}
+/* Estilos dos termos de serviço */
+
+.termos input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.termos label {
+    font-size: 14px;
+}
+
+/* Estilos do botão de enviar */
+
+.button_enviar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.button_enviar:hover {
+    background-color: #0056b3;
+}
+.termos{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
