@@ -64,7 +64,7 @@ footer {
 }
 
 section a {
-    color: #d40b01; /* Cor do texto do link */
+    color: #d40b01; /* Cor do texto do link 
     text-decoration: none; /* Remove o sublinhado padrão */
     transition: color 0.3s ease; /* Adiciona uma transição suave na mudança de cor */
 }

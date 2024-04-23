@@ -15,7 +15,7 @@ form.addEventListener('submit', (event) => {
         document.getElementById('nomeError').textContent = 'Por favor, preencha seu nome.';
         temErro = true;
     } else if (!validaNome(nomeInput.value.trim())) {
-        document.getElementById('nomeError').textContent = 'Por favor, insira um nome válido.';
+        document.getElementById('nomeError').textContent = ' o nome deve conter apenas letra.';
         temErro = true;
     } else {
         document.getElementById('nomeError').textContent = '';
