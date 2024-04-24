@@ -1,109 +1,68 @@
-body {
-  font-family: "Anta", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #030303; /* Cor de fundo do corpo */
-  font-size: 17px; /* Altera o tamanho da fonte padrão */
-  line-height: 1.1; /* Define o espaçamento entre as linhas */
-  color: #963e3e;
-  text-shadow: 0.5px 0.5px 0.5px #0f0e0e; /* Adiciona um contorno branco */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Educacional: CodeQuest</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Conexão HTML com JS</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>RPG EDUCACIONAL - CodeQuest</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Notícias</a>
+      <a href="#">Enredo</a>
+      <a href="#">Personagens</a>
+      <a href="#">Sobre</a>
+    </nav>
+  </header>
+  <main>
+    <section id="banner">
+      <img src="RPG Educacional - Codequest.jpg" alt="Banner do jogo CodeQuest" width="1000" height="400">
+    </section>
+    <section id="sobre-jogo">
+      <h3>Sobre o Jogo</h3>
+      <p>CodeQuest é um jogo de aventura educativo que mergulha os jogadores em um mundo futurista onde a programação é a chave para o avanço tecnológico. Os jogadores assumem o papel de um jovem programador talentoso recrutado pela renomada Guilda dos Codificadores para uma missão épica. O protagonista é convocado para enfrentar uma crise tecnológica causada pela propagação de uma inteligência artificial malévola chamada "BugMancer". Esta IA está corrompendo códigos vitais e ameaçando paralisar o ecossistema digital. O jogador embarca em uma jornada desafiadora, enfrentando diversas fases e resolvendo desafios de programação para deter o BugMancer e salvar o mundo digital.</p>
+    </section>
+    <section id="como-jogar">
+      <h4>Como Jogar</h4>
+      <p>CodeQuest combina elementos de jogos com conceitos de programação, oferecendo uma experiência envolvente e eficaz para aprender programação. Os jogadores não apenas adquirem conhecimentos técnicos, mas também desenvolvem habilidades de resolução de problemas, pensamento lógico e criatividade, todos essenciais para se tornarem programadores proficientes. Ao longo do jogo, os jogadores enfrentam desafios de programação que aumentam em dificuldade gradualmente. Para superar esses desafios, os jogadores precisam usar suas habilidades de lógica e programação para criar código que funcione corretamente. O jogo também oferece um sistema de feedback que ajuda os jogadores a aprender com seus erros e melhorar suas habilidades de programação.</p>
+    </section>
+    <section id="beneficios">
+      <h5>Benefícios</h5>
+      <ul>
+        <li>Aprenda a programar de forma divertida e envolvente.</li>
+        <li>Desenvolva habilidades de resolução de problemas, pensamento lógico e criatividade.</li>
+        <li>Prepare-se para uma carreira em programação.</li>
+        <li>Torne-se um cidadão digital mais consciente.</li>
+      </ul>
+    </section>
+    <section id="chamada-acao">
+      <h6>Comece sua Aventura!</h6>
+      <p>Baixe CodeQuest agora e embarque em uma jornada épica para salvar o mundo digital!</p>
+      <button>Baixar Agora</button>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2024 CodeQuest</p>
+  </footer>
 
-header {
-  background-color: #504d4d;
-  padding: 10px; /* Aumenta o padding para mais espaço */
-  overflow: auto; /* Limpa floats */
-  color: #ce4a4a; /* Cor do texto no cabeçalho */
-}
-
-nav {
-  float: right;
-}
-
-nav a {
-  margin-left: 15px; /* Aumenta a margem entre os links */
-  color: #ffffff; /* Cor do link */
-  text-decoration: none;
-  font-weight: bold; /* Deixa os links em negrito */
-}
-
-footer {
-  background-color: #333131; /* Cor do rodapé */
-  color: #ada8a8; /* Cor do texto no rodapé */
-  text-align: center;
-  padding: 10px; /* Aumenta o padding para mais espaço */
-}
-
-/* Estilos para os títulos */
-h2, h3, h4, h5, h6 {
-  background-color: #686767; /* Cor de fundo dos elementos (sobre o jogo-como jogar)*/
-  padding: 10px; /* Espaçamento interno */
-  margin-bottom: 10px; 
-  text-shadow: 1px 1px 1px #ffffff; /* Adiciona um contorno branco */
-}
-
-h1 {
-  font-size: 2rem; /* Tamanho maior para o título principal */
-}
-
-h2 {
-  font-size: 1.1rem; /* Tamanho menor para subtítulos */
-  
-}
-
-h3, h4, h5, h6 {
-  font-size: 1.1rem; 
-  border-radius: 10px; /* Arredonda as bordas */
-}
-
-/* Botão */
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 14px 28px; 
-  font-size: 1rem; /* Tamanho da fonte do botão */
-  cursor: pointer;
-  transition: background-color 0.3s ease; 
-}
-
-button:hover {
-  background-color: #0056b3; /* Cor mais escura ao passar o mouse */
-}
-
-main {
-  padding: 30px; /* Aumenta o padding para mais espaço */
-}
-
-.hover-effect {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-#sobre-jogo h3,
-#como-jogar h4,
-#beneficios h5,
-#chamada-acao h6 {
-  text-align: left;
-  margin: 0 auto; /* Define as margens automáticas para centralizar horizontalmente */
-  width: 90%; /* Define a largura dos títulos */
-}
-
-#banner {
-  text-align: center; /* Alinha o conteúdo ao centro */
-}
-
-#banner img {
-  display: block; /* Torna a imagem um bloco para que a margem funcione */
-  margin: 0 auto; /* Define margens automáticas para centralizar horizontalmente */
-}
-
-#banner img {
-  transition: transform 0.3s ease-in-out;
-}
-
-#banner img:hover {
-  transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra cinza */
-}
-
+  <script>
+    // Adiciona efeito de transição suave para os títulos ao passar o mouse sobre eles
+    const titles = document.querySelectorAll("h2, h3, h4, h5, h6");
+    titles.forEach(title => {
+      title.addEventListener("mouseover", function() {
+        this.classList.add("hover-effect");
+      });
+      title.addEventListener("mouseout", function() {
+        this.classList.remove("hover-effect");
+      });
+      
+    });
+  </script>
+</body>
+</html>
