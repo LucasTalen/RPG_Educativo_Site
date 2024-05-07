@@ -61,9 +61,6 @@ body{
     font-family: 'Times New Roman', serif;
 }
 
-/* Estilos do formulário */
-
-/* Estilos do formulário */
 
 .formulario {
     margin-top: 20px;
@@ -75,7 +72,7 @@ body{
     margin-bottom: 5px;
 }
 
-/* Estilos dos campos de formulário */
+
 
 .nome, .e-mail {
     border: 1px solid #ccc;
@@ -101,7 +98,7 @@ body{
     display: flex;
     
 }
-/* Estilos dos termos de serviço */
+
 
 .termos input[type="checkbox"] {
     margin-right: 10px;
@@ -112,7 +109,7 @@ body{
     font-size: 14px;
 }
 
-/* Estilos do botão de enviar */
+
 
 .button_enviar {
     background-color: #007bff;

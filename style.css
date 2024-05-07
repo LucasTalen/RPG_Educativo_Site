@@ -2,18 +2,18 @@ body {
   font-family: "Anta", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #030303; /* Cor de fundo do corpo */
-  font-size: 17px; /* Altera o tamanho da fonte padrão */
-  line-height: 1.1; /* Define o espaçamento entre as linhas */
+  background-color: #030303; 
+  font-size: 17px; 
+  line-height: 1.1; 
   color: #963e3e;
-  text-shadow: 0.5px 0.5px 0.5px #0f0e0e; /* Adiciona um contorno branco */
+  text-shadow: 0.5px 0.5px 0.5px #0f0e0e; 
 }
 
 header {
   background-color: #504d4d;
-  padding: 10px; /* Aumenta o padding para mais espaço */
-  overflow: auto; /* Limpa floats */
-  color: #ce4a4a; /* Cor do texto no cabeçalho */
+  padding: 10px; 
+  overflow: auto; 
+  color: #ce4a4a;
 }
 
 nav {
@@ -21,58 +21,58 @@ nav {
 }
 
 nav a {
-  margin-left: 15px; /* Aumenta a margem entre os links */
-  color: #ffffff; /* Cor do link */
+  margin-left: 15px; 
+  color: #ffffff; 
   text-decoration: none;
-  font-weight: bold; /* Deixa os links em negrito */
+  font-weight: bold;
 }
 
 footer {
-  background-color: #333131; /* Cor do rodapé */
-  color: #ada8a8; /* Cor do texto no rodapé */
+  background-color: #333131; 
+  color: #ada8a8;
   text-align: center;
-  padding: 10px; /* Aumenta o padding para mais espaço */
+  padding: 10px;
 }
 
-/* Estilos para os títulos */
+
 h2, h3, h4, h5, h6 {
-  background-color: #686767; /* Cor de fundo dos elementos (sobre o jogo-como jogar)*/
-  padding: 10px; /* Espaçamento interno */
+  background-color: #686767; 
+  padding: 10px;
   margin-bottom: 10px; 
-  text-shadow: 1px 1px 1px #ffffff; /* Adiciona um contorno branco */
+  text-shadow: 1px 1px 1px #ffffff;
 }
 
 h1 {
-  font-size: 2rem; /* Tamanho maior para o título principal */
+  font-size: 2rem; 
 }
 
 h2 {
-  font-size: 1.1rem; /* Tamanho menor para subtítulos */
+  font-size: 1.1rem;
   
 }
 
 h3, h4, h5, h6 {
   font-size: 1.1rem; 
-  border-radius: 10px; /* Arredonda as bordas */
+  border-radius: 10px; 
 }
 
-/* Botão */
+
 button {
   background-color: #007bff;
   color: #fff;
   border: none;
   padding: 14px 28px; 
-  font-size: 1rem; /* Tamanho da fonte do botão */
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease; 
 }
 
 button:hover {
-  background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+  background-color: #0056b3;
 }
 
 main {
-  padding: 30px; /* Aumenta o padding para mais espaço */
+  padding: 30px;
 }
 
 .hover-effect {
@@ -85,17 +85,17 @@ main {
 #beneficios h5,
 #chamada-acao h6 {
   text-align: left;
-  margin: 0 auto; /* Define as margens automáticas para centralizar horizontalmente */
-  width: 90%; /* Define a largura dos títulos */
+  margin: 0 auto; 
+  width: 90%; 
 }
 
 #banner {
-  text-align: center; /* Alinha o conteúdo ao centro */
+  text-align: center; 
 }
 
 #banner img {
-  display: block; /* Torna a imagem um bloco para que a margem funcione */
-  margin: 0 auto; /* Define margens automáticas para centralizar horizontalmente */
+  display: block; 
+  margin: 0 auto; 
 }
 
 #banner img {
@@ -103,7 +103,7 @@ main {
 }
 
 #banner img:hover {
-  transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra cinza */
+  transform: scale(1.1); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
 }
 
