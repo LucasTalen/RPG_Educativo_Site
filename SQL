@@ -1,0 +1,110 @@
+CREATE DATABASE  RPG;
+USE RPG;
+
+CREATE TABLE Item (
+  Id_Item INT IDENTITY(1,1) NOT NULL,
+  Nome_Item VARCHAR(45) NOT NULL,
+  Quantidade INT NOT NULL,
+  CONSTRAINT item_id_item_pk PRIMARY KEY (Id_Item)
+);
+
+CREATE TABLE Usuario (
+  Id_Usuario INT IDENTITY(1,1)  NOT NULL,
+  Nome VARCHAR(45) NOT NULL,
+  Email VARCHAR(45) NOT NULL,
+  RecebeEventos VARCHAR(MAX)  NOT NULL,
+  RecebeExclusivos VARCHAR(MAX) NOT NULL,
+  DataDeInscricao DATETIME NOT NULL,
+  CONSTRAINT usuario_id_usuario_pk PRIMARY KEY (Id_Usuario),
+  CONSTRAINT usuario_recebe_eventos_ck CHECK(RecebeEventos IN ('SIM', 'NÃO')),
+  CONSTRAINT usuario_recebe_exclusivos_ck CHECK(RecebeExclusivos IN ('SIM', 'NÃO'))
+);
+
+CREATE TABLE Inventario (
+  id_Inventario INT IDENTITY(1,1) NOT NULL,
+  id_Usuario INT NOT NULL,
+  id_Item INT NOT NULL,
+  CONSTRAINT inventario_id_inventario_pk PRIMARY KEY (id_Inventario),
+  CONSTRAINT inventario_id_usuario_fk FOREIGN KEY (id_Usuario) REFERENCES Usuario(id_Usuario),
+  CONSTRAINT inventario_id_item_fk FOREIGN KEY (id_Item) REFERENCES Item(id_Item)
+);
+
+CREATE TABLE Compra (
+  id_Compra INT IDENTITY(1,1) NOT NULL,
+  id_Usuario INT NOT NULL,
+  id_Item INT NOT NULL,
+  MetodoDePagamento VARCHAR(MAX) NOT NULL,
+  ValorDaCompra FLOAT NOT NULL,
+  StatusDaCompra VARCHAR(MAX) NOT NULL,
+  CONSTRAINT compra_id_compra_pk PRIMARY KEY (id_Compra),
+  CONSTRAINT compra_id_usuario_fk FOREIGN KEY (id_Usuario) REFERENCES Usuario(id_Usuario),
+  CONSTRAINT compra_id_item_fk FOREIGN KEY (id_Item) REFERENCES Item(id_Item),
+  CONSTRAINT compra_metodo_pagamento_ck CHECK(MetodoDePagamento IN ('PIX', 'CREDITO')),
+  CONSTRAINT compra_status_da_compra_ck CHECK(StatusDaCompra IN ('PENDENTE', 'CONCLUIDO'))
+);
+
+INSERT INTO Item (Nome_Item, Quantidade) VALUES 
+('Poção de Depuração', 15),
+('Impulsionador de Cache', 23),
+('Elixir de Refatoração de Código', 12),
+('Escudo de Firewall', 2),
+('Pergaminho de Algoritmo', 4),
+('Kit de Expansão de Memória', 1),
+('Poção de Destaque de Sintaxe', 10),
+('Poção Recursiva', 9),
+('Elixir de Criptografia', 5),
+('Poção de API', 3);
+
+
+INSERT INTO Usuario (Nome, Email, RecebeEventos, RecebeExclusivos, DataDeInscricao) VALUES
+('Ana', 'ana@example.com', 'SIM', 'SIM', GETDATE()),
+('Pedro', 'pedro@example.com', 'SIM', 'SIM', GETDATE()),
+('Mariana', 'mariana@example.com', 'SIM', 'NÃO',GETDATE()),
+('Lucas', 'lucas@example.com', 'SIM', 'SIM', GETDATE()),
+('Isabela', 'isabela@example.com', 'SIM', 'NÃO', GETDATE());
+
+
+INSERT INTO Inventario (id_Usuario, id_Item) VALUES
+(1, 4),
+(2, 5),
+(3, 6),
+(4, 7),
+(5, 8),
+(1, 9),
+(2, 10),
+(3, 1),
+(4, 2),
+(5, 3);
+
+
+INSERT INTO Compra (id_Usuario, id_Item, MetodoDePagamento, ValorDaCompra, StatusDaCompra)
+VALUES 
+(2, 6, 'CREDITO', 49.99, 'CONCLUIDO'),
+(3, 7, 'CREDITO', 799.90, 'PENDENTE'),
+(4, 8, 'PIX', 799.99, 'CONCLUIDO'),
+(5, 9, 'PIX', 1200.00, 'CONCLUIDO'),
+(2, 10, 'CREDITO', 1999.99, 'CONCLUIDO'),
+(3, 1, 'PIX', 3.99, 'CONCLUIDO'),
+(2, 2, 'CREDITO', 249.99, 'CONCLUIDO'),
+(4, 3, 'PIX', 699.99, 'CONCLUIDO'),
+(5, 4, 'CREDITO', 499.99, 'CONCLUIDO'),
+(1, 5, 'PIX', 399.99, 'CONCLUIDO');
+
+
+
+
+SELECT * FROM Item;
+SELECT * FROM Usuario;
+SELECT * FROM Inventario;
+SELECT * FROM Compra;
+
+
+SELECT Usuario.Nome AS NomeUsuario, Item.Nome_Item, Compra.ValorDaCompra
+FROM Compra
+JOIN Usuario ON Compra.id_Usuario = Usuario.id_Usuario
+JOIN Item ON Compra.id_Item = Item.Id_Item;
+
+SELECT Usuario.Nome AS NomeUsuario, Item.Nome_Item 
+FROM Inventario
+JOIN Usuario ON Inventario.id_Usuario = Usuario.Id_Usuario
+JOIN Item ON Inventario.id_Item = Item.id_Item;
